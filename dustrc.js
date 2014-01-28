@@ -15,7 +15,7 @@ var DustModule = function(config) {
 
     dustrc = {
         options: options,
-        grab: function(base, callback, ext) {
+        parse: function(base, callback, ext) {
             if(typeof ext == typeof new Function) {
                 callback = ext;
                 ext = extension;
@@ -39,7 +39,7 @@ var DustModule = function(config) {
                                 var fDef = {file: realPath, base: options.src || __dirname, path:('/' + realPath.substring((options.src || __dirname).length)).replace(/^[\/]+/i, '')};
                                 callback(fDef);
                             } else if(stat.isDirectory()) {
-                                dustrc.grab(realPath, callback, fileExt);
+                                dustrc.parse(realPath, callback, fileExt);
                             } else {
                                 // extension mismatch
                             }
@@ -86,7 +86,7 @@ var DustModule = function(config) {
             watch.createMonitor(sourcePath, function(monitor){
                 console.log('monitoring: ' + sourcePath);
                 var compile = function() {
-                    dustrc.grab(sourcePath);
+                    dustrc.parse(sourcePath);
                 };
                 monitor.on('change', compile);
                 monitor.on('create', compile);
