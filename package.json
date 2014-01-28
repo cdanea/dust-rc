@@ -1,0 +1,36 @@
+{
+  "name": "dust-rc",
+  "version": "0.2.1",
+  "description": "Small utility to compile a directory of dust.js templates to a target directory of compiled JS resources. Tree structure is preserved.",
+  "tags": [
+    "util",
+    "utility",
+    "dustjs",
+    "dustjs-linkedin",
+    "templates",
+    "recursive"
+  ],
+  "homepage": "https://github.com/cdanea/dust-rc",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cdanea/dust-rc.git"
+  },
+  "engines": {
+    "node": ">= 0.10.x"
+  },
+  "author": "Ciprian Danea <ciprian@danea.ro>",
+  "private": false,
+  "scripts": {
+    "start": "node index"
+  },
+  "files": [
+    "config.js",
+    "dustrc.js"
+  ],
+  "dependencies": {
+    "dustjs-linkedin": "~2.3.2",
+    "watch": "~0.8.0",
+    "underscore": "~1.5.2",
+    "mkdirp": "~0.3.5"
+  }
+}
