@@ -1,27 +1,33 @@
 /**
  * Created by ciprian on 6/5/14.
  */
-var chai = require('chai'), expect = chai.expect, path = require('path');
+var
+  chai = require('chai'),
+  expect = chai.expect,
+  path = require('path'),
+  dustrc = require('../lib/dustrc'),
+  dust = require('dustjs-linkedin')
+
+  ;
+
 chai.should();
 
-describe("Basic initial test", function () {
-
-  beforeEach(function () {
-    //
-  });
-  afterEach(function () {
-    //
-  });
-  it("Should work", function () {
-    var opt = {src: path.join(__dirname, "tpl"), base: path.join(__dirname, "tpl"), out: path.join(__dirname, "out")};
-//    var
-//      options = {
-//        src: __dirname + '/tpl/',
-//        out: __dirname + "/public/js/dust/"
-//      },
-//    dirCompiler.parse();
-    var tplCompiler = require('../lib/dustrc')(opt);
+describe("Basic initial test.", function () {
+  it("Should work!", function (done) {
+    var options = {
+      src: path.join(__dirname, "tpl"),
+      base: path.join(__dirname, "tpl"),
+      out: path.join(__dirname, "out"),
+      quiet: true
+    };
+    var tplCompiler = dustrc(options);
     tplCompiler.should.be.an('object');
-    tplCompiler.parse(opt.src);
+    tplCompiler.parse(options.src, function (error, templates) {
+      expect(error).to.be.not.ok;
+      templates.should.be.an('array');
+      templates.length.should.equal(1);
+      done();
+    });
   });
+
 });

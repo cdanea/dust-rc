@@ -21,7 +21,8 @@
   "author": "Ciprian Danea <ciprian@danea.ro>",
   "private": false,
   "scripts": {
-    "start": "node index"
+    "start": "node index",
+    "test" : "mocha --recursive -R spec ./test/"
   },
   "main" : "lib/dustrc",
   "files": [
@@ -38,6 +39,7 @@
     "mkdirp": "*"
   },
   "devDependencies": {
-    "chai": "*"
+    "chai": "*",
+    "mocha": "*"
   }
 }
