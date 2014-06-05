@@ -23,9 +23,13 @@
   "scripts": {
     "start": "node index"
   },
+  "main" : "lib/dustrc",
   "files": [
-    "config.js",
-    "dustrc.js"
+    "lib",
+    ".gitignore",
+    "package.json",
+    "README.md",
+    "index.js"
   ],
   "dependencies": {
     "dustjs-linkedin": "~2.3.2",
