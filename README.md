@@ -10,5 +10,5 @@ Small utility to compile a directory of dust.js templates to a target directory 
             src: __dirname + '/tpl/',
             out: __dirname + "/public/js/dust/"
         },
-        dirCompiler = require('./dustrc')(options);
+    dirCompiler = require('./dustrc')(options);
     dirCompiler.parse();

@@ -32,14 +32,12 @@
     "index.js"
   ],
   "dependencies": {
-    "dustjs-linkedin": "~2.3.2",
-    "watch": "~0.8.0",
-    "underscore": "~1.5.2",
-    "mkdirp": "~0.3.5"
+    "dustjs-linkedin": "*",
+    "watch": "*",
+    "underscore": "*",
+    "mkdirp": "*"
   },
   "devDependencies": {
-    "mocha": "~1.17.1",
-    "should": "~3.1.1",
-    "chai": "~1.8.1"
+    "chai": "*"
   }
 }
