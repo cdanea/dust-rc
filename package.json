@@ -33,7 +33,7 @@
     "index.js"
   ],
   "dependencies": {
-    "dustjs-linkedin": "*",
+    "dustjs-linkedin": "2.4.0",
     "watch": "*",
     "underscore": "*",
     "mkdirp": "*"
